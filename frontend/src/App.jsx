@@ -1,27 +1,21 @@
-import Box from "./components/Box"
-import Button from "./components/Button"
-import Heading from "./components/Heading"
-import InputBox from "./components/InputBox"
-import SubHeading from "./components/SubHeading"
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Signin from './Pages/Signin';
+import Signup from './Pages/Signup';
+
+
 
 function App() {
-
-  return (
-    <div className="bg-slate-300 h-screen flex justify-center">
-      <div className="flex flex-col justify-center">
-      <div className="rounded-lg bg-white w-full sm:w-full p-5
-      h-90 text-center">
-          <Heading label={"Sign up"}/>
-          <SubHeading label={"Enter your information to create an Account"}/> 
-          <InputBox placeholder={"Enter Your Name"} label={"Your name"}/>
-          <InputBox placeholder={"Enter Your Email"} label={"Email"}/>
-          <InputBox placeholder={"Enter Your Password"} label={"Password"}/>
-          <Button Button={"Sign Up"}/>
-        </div>
-      </div>
-    </div>
-   
-  )
+    return (
+        <>
+        <BrowserRouter>
+        <Routes>
+        <Route path='/signup' element={<Signup/>}/>
+        <Route path='/signin' element={<Signin/>} />
+        </Routes>
+        </BrowserRouter>
+        </>
+    );
 }
 
-export default App
+export default App;
