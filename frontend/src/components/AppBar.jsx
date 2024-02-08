@@ -7,8 +7,8 @@ export function AppBar(props) {
         <div className='border-2 border-gray-200'>
         <ul class="flex justify-between">
         <li class="mr-3">
-          <a class="inline-block border border-blue-500 rounded py-2 px-4 bg-gray-700
-           hover:bg-blue-700 text-white m-5 font-semibold " href="#">Payment App</a>
+          <a class="inline-block border border-gray-500 rounded py-2 px-4 text-black
+           hover:bg-gray-600 m-5 font-semibold " href="#">Payment App</a>
         </li>
 
         
