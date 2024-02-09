@@ -15,7 +15,7 @@ function Signin() {
                     <Heading label={"Sign in"}/>
                     <SubHeading label={"Enter your information to Login in your Account"}/> 
                     <InputBox placeholder={"Enter Your Email"} label={"Email"}/>
-                    <InputBox placeholder={"Enter Your Password"} label={"Password"}/>
+                    <InputBox placeholder={"Enter Your Password"} type="password" label={"Password"}/>
                     <Button Button={"Sign in"}/>
                     <ButtonWarning label={"Create an Account?"}  ButtonText={"Signin"} to={"/signup"}/>
                   </div>
