@@ -10,7 +10,7 @@ export function Dashboard(props) {
                 <AppBar/>
                 <div className='m-8 font-semibold sm:text-md text-2xl'>Your Balance Rs 10000</div>
                 <div className='ml-8 mb-3 font-semibold text-2xl mt-10'>Users</div>
-                <input type="text" placeholder="Search Users" className="sm:w-5/6 h-12 text-sm rounded-lg border-gray-300 
+                <input type="text" placeholder="Search Users ..." className="placeholder:p-36 sm:w-5/6 h-12 text-sm rounded-lg border-gray-300 
                 -mt-1 ml-8 border-2 px-10 py-2 
                 focus:outline-none focus:border-blue-500 "/>
 
