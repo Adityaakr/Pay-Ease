@@ -6,9 +6,6 @@ import SubHeading from "../components/SubHeading"
 import ButtonWarning from "../components/ButtonWarning"
 
 
-
-
-
 function Signin() {
         return (
                 <div className="bg-slate-300 h-screen flex justify-center">
