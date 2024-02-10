@@ -14,7 +14,8 @@ function Signup() {
       h-90 text-center">
           <Heading label={"Sign up"}/>
           <SubHeading label={"Enter your information to create an Account"}/> 
-          <InputBox placeholder={"Enter Your Name"} label={"Your name"}/>
+          <InputBox placeholder={"Enter Your First Name"} label={"First name"}/>
+          <InputBox placeholder={"Enter Your Last Name"} label={"Last name"}/>
           <InputBox placeholder={"Enter Your Email"} label={"Email"}/>
           <InputBox placeholder={"Enter Your Password"} label={"Password"}/>
           <Button Button={"Sign Up"}/>
