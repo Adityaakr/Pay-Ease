@@ -3,9 +3,7 @@ import React from "react";
 export function SendMoney(props) {
   return (
     <div className="lg:shadow-2xl lg:m-64 m-8 lg:mr-50 p-3 shadow-2xl shadow-outer  lg:pl-96 lg:pr-96  mt-60 bg-white-500">
-      <div className="font-semibold mr-15 text-2xl ml-20 flex-col md:mr-36 ">
-        Send Money
-      </div>
+      <div className="font-semibold text-3xl ml-10 sm:ml-15">Send Money</div>
       <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse m-5">
         <button
           type="button"
