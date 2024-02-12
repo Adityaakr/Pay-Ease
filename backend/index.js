@@ -1,14 +1,14 @@
-const express = require("express")
-const mainRouter = require("./routes/index")
+// backend/index.js
+const express = require('express');
+const cors = require("cors");
+const rootRouter = require("./routes/index");
+
+
 const app = express();
-const cors = require("cors")
 
-app.use(cors())
-app.use(express.json())
+app.use(cors());
+app.use(express.json());
 
-const mainRouter = require("./routes/index")
+app.use("/api/v1", rootRouter);
 
-app.use("/api/v1/user",mainRouter);
-
-app.listen(3000);
- 
+app.listen(3001, () => console.log(`Listen on: ${3001}`) )
