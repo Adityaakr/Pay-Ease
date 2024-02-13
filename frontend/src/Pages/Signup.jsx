@@ -22,7 +22,8 @@ function Signup() {
           <Heading label={"Sign up"} />
           <SubHeading label={"Enter your information to create an Account"} />
           <InputBox
-            onChange={(e) => {
+          
+            onChange={e => {
               setFirstName(e.target.value);
             }}
             placeholder={"Enter Your First Name"}
@@ -50,18 +51,16 @@ function Signup() {
             label={"Password"}
           />
           <Button
-            onClick={ async () => {
-             const response = await axios.post("https://localhost:3001/api/v1/user/signup", {
+            onclick={async () => {
+            const response = axios.post("http://localhost:3001/api/v1//user/signup", {
                 username,
                 firstName,
                 lastName,
-                Password,
-              });
-              //to store the token in (Application)
-              localStorage.setItem("token", response.data.token)
-              //remove the token as well when user logout
-              localStorage.removeItem("token")
+                Password
+              })
+              response.data.token
             }}
+            
             label={"Sign Up"}
           />
 

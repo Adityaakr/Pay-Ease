@@ -8,7 +8,7 @@ export function AppBar(props) {
         <ul class="flex justify-between">
         <li class="mr-3">
           <a class="inline-block border border-gray-500 rounded py-2 px-4 text-black
-           hover:bg-gray-600 m-5 font-semibold " href="#">Payment App</a>
+           hover:bg-gray-600 m-5 font-semibold " href="#">Adi-PAY</a>
         </li>
 
         
