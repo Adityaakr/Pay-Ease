@@ -3,7 +3,7 @@ import Button from "../components/Button";
 import Heading from "../components/Heading";
 import InputBox from "../components/InputBox";
 import SubHeading from "../components/SubHeading";
-import ButtonWarning from "../components/ButtonWarning";
+import BottomWarning from "../components/BottomWarning";
 
 function Signin() {
   return (
@@ -23,12 +23,8 @@ function Signin() {
             type="password"
             label={"Password"}
           />
-          <Button Button={"Sign in"} />
-          <ButtonWarning
-            label={"Create an Account?"}
-            ButtonText={"Signin"}
-            to={"/signup"}
-          />
+          <Button label={"Sign in"} />
+          <BottomWarning label={"Create an account?"} buttonText={"Sign in"} to={"/signup"} />
         </div>
       </div>
     </div>

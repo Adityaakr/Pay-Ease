@@ -1,14 +1,9 @@
 import React from 'react'
 
-function Button({label, onclick}) {
-        return (
-                <button type="button" onClick={onclick}
-                className="bg-gray-500 w-full mt-8 h-10 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded">
-                {/*  same as IconType */}
-                {label}
-
-                </button>    
-        )
-}
+function Button({label, onClick}) {
+        return <button onClick={onClick} type="button" class=" mt-3 w-full text-white bg-gray-800 hover:bg-gray-900
+         focus:outline-none focus:ring-4 focus:ring-gray-300
+          font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">{label}</button>
+    }
 
 export default Button

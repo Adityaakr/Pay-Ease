@@ -9,5 +9,4 @@ function InputBox({label, placeholder, onChange}) {
         </div>
         )
 }
-
-export default InputBox
+export default InputBox;

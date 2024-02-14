@@ -9,9 +9,3 @@ router.use("/account", accountRouter);
 
 module.exports = router;
 
-// {
-//         "username": "08quant@gmail.com",
-//         "firstName": "Aditya",
-//         "lastName": "Kumar",
-//         "password":  "Adityakr1@"
-//     }
