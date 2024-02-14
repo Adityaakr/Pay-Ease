@@ -16,6 +16,10 @@ const signupBody = zod.object({
   password: zod.string(),
 });
 
+//re-evaluate if email is already taken or not
+//its checking if content in body that we are 
+//providing is same as the (signupBody) not body 
+
 router.post("/signup", async (req, res) => {
   const { success } = signupBody.safeParse(req.body);
   if (!success) {

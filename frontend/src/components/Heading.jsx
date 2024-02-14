@@ -8,4 +8,4 @@ function Heading({label}) {
         )
 }
 
-export default Heading
+export default Heading;
