@@ -31,12 +31,13 @@ import axios from "axios";
         }} placeholder="Your Password" label={"Password"} />
         <div className="pt-4">
           <Button onClick={async () => {
-            const response = await axios.post("https://localhost:3000/api/v1/user/signup", {
+            const response = await axios.post("http://localhost:3001/api/v1/user/signup", {
               username,
               firstName,
               lastName,
               password
             });
+            
             localStorage.setItem("token", response.data.token)
             
           }} label={"Sign up"} />
