@@ -1,11 +1,9 @@
 // backend/db.js
-//account and balance will be stored in DB as this 
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://hemlataverma30021:adityakr@cluster0.dy7lf73.mongodb.net/')
-.then(() => console.log("Connected to MongoDB"))
-.catch((err) => console.log(err))
-
+mongoose.connect("mongodb://localhost:27017/paytm")
+  .then(() => console.log("Connected to DB"))
+  .catch((err) => console.error(err));
 // Create a Schema for Users
 const userSchema = new mongoose.Schema({
     username: {
@@ -38,8 +36,6 @@ const userSchema = new mongoose.Schema({
 
 const accountSchema = new mongoose.Schema({
     userId: {
-        //referancing to user only the user that is
-        //already present should able to see account (No -> userId and Balance).
         type: mongoose.Schema.Types.ObjectId, // Reference to User model
         ref: 'User',
         required: true
@@ -52,7 +48,6 @@ const accountSchema = new mongoose.Schema({
 
 const Account = mongoose.model('Account', accountSchema);
 const User = mongoose.model('User', userSchema);
-
 
 module.exports = {
 	User,
