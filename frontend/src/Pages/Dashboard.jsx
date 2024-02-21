@@ -1,6 +1,7 @@
 import React from 'react'
 import { AppBar } from '../components/AppBar'
 import { Users } from '../components/Users'
+import User from '../components/Users'
 import { Balance } from '../components/Balance'
 
 
@@ -11,8 +12,9 @@ export function Dashboard(props) {
                 <div>
                 <AppBar/>
                 <div>
-                <Balance value={"10000"}/>
+                <Balance value={Users.Balance}/>
                 <Users/>
+                <User/>
                 </div>
                 
                 

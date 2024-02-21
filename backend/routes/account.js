@@ -1,5 +1,4 @@
 // backend/routes/account.js
-// balance and transfer endpoints
 const express = require("express");
 const { authMiddleware } = require("../middleware");
 const { Account } = require("../db");
@@ -7,7 +6,6 @@ const { default: mongoose } = require("mongoose");
 
 const router = express.Router();
 
-//to get the balance
 router.get("/balance", authMiddleware, async (req, res) => {
   const account = await Account.findOne({
     userId: req.userId,
@@ -18,8 +16,6 @@ router.get("/balance", authMiddleware, async (req, res) => {
   });
 });
 
-//to transfer money
-// 1) good solution has startSession means that (if anything fails) revert the whole process
 router.post("/transfer", authMiddleware, async (req, res) => {
   const session = await mongoose.startSession();
 
@@ -31,8 +27,6 @@ router.post("/transfer", authMiddleware, async (req, res) => {
     session
   );
 
-  //checks -
-  //check if user exists if not abort the transaction
   if (!account || account.balance < amount) {
     await session.abortTransaction();
     return res.status(400).json({
