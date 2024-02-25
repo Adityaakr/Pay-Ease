@@ -6,7 +6,7 @@ import InputBox from "../components/InputBox";
 import SubHeading from "../components/SubHeading";
 import axios from "axios";
 import BottomWarning from "../components/BottomWarning";
-import { Image } from "../components/image";
+import { Image } from "../components/Image";
 
 function Signin() {
   const [username, setUsername] = useState("");
