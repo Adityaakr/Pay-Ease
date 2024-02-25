@@ -7,6 +7,7 @@ import SubHeading from "../components/SubHeading";
 import axios from "axios";
 import DashButton from "../components/Dash-Button";
 import BottomWarning from "../components/BottomWarning";
+import { Image } from "../components/Image";
 
 export const handleSignup = async ({ username, firstName, lastName, password }) => {
   try {
@@ -22,7 +23,7 @@ export const handleSignup = async ({ username, firstName, lastName, password }) 
     localStorage.setItem("token", response.data.token);
     return true; // Indicate successful signup
   } catch (error) {
-    console.error("Email already exists:", error);
+    alert("Incorrect Information:", error);
     // Handle signup failure if needed
     return false; // Indicate failed signup
   }
@@ -47,7 +48,8 @@ const Signup = () => {
   return (
     <div className="bg-slate-300 h-screen flex justify-center">
       <div className="flex flex-col justify-center">
-        <div className="rounded-lg bg-white w-80 text-center p-2 h-max px-4">
+        <div className="rounded-lg bg-white text-center p-5 h-max px-4 ">
+        <Image/>
           <Heading label={"Sign up"} />
           <SubHeading label={"Enter your information to create an account"} />
           <InputBox
@@ -78,7 +80,7 @@ const Signup = () => {
             placeholder="Your Password"
             label={"Password"}
           />
-          <div className="pt-4">
+          <div className="pt-4 ">
             <Button onClick={handleSignupClick} label={"Sign up"} />
           </div>
           <BottomWarning
