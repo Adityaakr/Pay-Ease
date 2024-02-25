@@ -6,6 +6,7 @@ import InputBox from "../components/InputBox";
 import SubHeading from "../components/SubHeading";
 import axios from "axios";
 import BottomWarning from "../components/BottomWarning";
+import { Image } from "../components/image";
 
 function Signin() {
   const [username, setUsername] = useState("");
@@ -31,10 +32,12 @@ function Signin() {
     }
   };
 
+
   return (
-    <div className="bg-slate-300 h-screen flex justify-center">
-      <div className="flex flex-col justify-center">
+    <div className="bg-slate-300  h-screen flex justify-center">
+      <div className="flex flex-col justify-center ">
         <div className="rounded-lg bg-white w-full sm:w-full p-5 h-90 text-center">
+          <Image/>
           <Heading label={"Sign in"} />
           <SubHeading label={"Enter your information to Login in your Account"} />
           <InputBox

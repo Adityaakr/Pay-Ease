@@ -152,4 +152,21 @@ router.get("/bulk", async (req, res) => {
   });
 });
 
+router.get("/info", authMiddleware, async (req, res) => {
+  try {
+    const user = await User.findById(req.userId);
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+    // Only send necessary user information (omit sensitive data like password)
+    const { username, firstName, lastName } = user;
+    res.json({ username, firstName, lastName });
+  } catch (error) {
+    console.error("Error fetching user info:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+});
+
+
+
 module.exports = router;
