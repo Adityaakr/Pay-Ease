@@ -5,7 +5,6 @@ import Heading from "../components/Heading";
 import InputBox from "../components/InputBox";
 import SubHeading from "../components/SubHeading";
 import axios from "axios";
-import DashButton from "../components/Dash-Button";
 import BottomWarning from "../components/BottomWarning";
 import { Image } from "../components/Image";
 
