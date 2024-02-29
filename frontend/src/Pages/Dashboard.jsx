@@ -5,7 +5,7 @@ import User from '../components/Users';
 import { Balance } from '../components/Balance';
 import axios from 'axios'; // Import axios for making HTTP requests
 
-export function Dashboard(props) {
+export function Dashboard() {
     const [balance, setBalance] = useState("Loading..."); // Initialize balance with "Loading..."
 
     useEffect(() => {

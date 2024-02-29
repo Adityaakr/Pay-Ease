@@ -25,6 +25,7 @@ export function Users() {
       });
   }, [filter, firstName, lastName]);
 
+  
   return (
     <>
       <div className="ml-7 mb-3 font-semibold text-3xl text-blue-500 mt-5">Users</div>

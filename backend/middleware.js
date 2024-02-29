@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
-const JWT_SECRET = process.env.JWT_SECRET || adityakr
+const JWT_SECRET = process.env.JWT_SECRET 
 
 const authMiddleware = async (req, res, next) => {
   try {
