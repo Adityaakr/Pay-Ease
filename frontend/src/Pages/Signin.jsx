@@ -7,6 +7,8 @@ import SubHeading from "../components/SubHeading";
 import axios from "axios";
 import BottomWarning from "../components/BottomWarning";
 import { Image } from "../components/Image";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Signin() {
   const [username, setUsername] = useState("");
@@ -23,23 +25,26 @@ function Signin() {
         }
       );
 
-     
       localStorage.setItem("token", response.data.token);
+
+     
       navigate(`/dashboard`); // Navigate to dashboard page with user data in URL
     } catch (error) {
       console.error("Signin failed:", error);
-      alert("Signin failed. Please check your credentials.");
+
+      toast.error("Check Credentials once again and Try again !", {});
     }
   };
-
 
   return (
     <div className="bg-slate-300  h-screen flex justify-center">
       <div className="flex flex-col justify-center ">
         <div className="rounded-lg bg-white w-full sm:w-full p-5 h-90 text-center">
-          <Image/>
+          <Image />
           <Heading label={"Sign in"} />
-          <SubHeading label={"Enter your information to Login in your Account"} />
+          <SubHeading
+            label={"Enter your information to Login in your Account"}
+          />
           <InputBox
             placeholder={"Enter Your Email"}
             label={"Email"}
@@ -54,13 +59,13 @@ function Signin() {
             onChange={(e) => setPassword(e.target.value)}
           />
           <Button onClick={handleSignIn} label={"Sign in"} />
-           <BottomWarning
+          <ToastContainer />
+          <BottomWarning
             label={"Already have an account?"}
             buttonText={"Sign in"}
             to={"/Signup"}
           />
         </div>
-       
       </div>
     </div>
   );

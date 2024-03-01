@@ -4,15 +4,26 @@ import { Users } from '../components/Users';
 import User from '../components/Users';
 import { Balance } from '../components/Balance';
 import axios from 'axios'; // Import axios for making HTTP requests
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export function Dashboard() {
-    const [balance, setBalance] = useState("Loading..."); // Initialize balance with "Loading..."
 
+
+    const [balance, setBalance] = useState("Loading..."); // Initialize balance with "Loading..."
     useEffect(() => {
         // Make API call to fetch user's balance
         fetchUserBalance();
     }, []);
 
+    useEffect(() => {
+        const isLoggedIn = localStorage.getItem("token") !== null;
+        if (isLoggedIn) {
+            toast.success("Currently Logged In", {});
+        }
+    }, []);
+    
     const fetchUserBalance = async () => {
         try {
             const response = await axios.get('http://localhost:3001/api/v1/account/balance', {
@@ -29,13 +40,16 @@ export function Dashboard() {
     };
 
     return (
+       
         <div>
             <AppBar />
             <div>
                 <Balance value={balance} /> {/* Pass balance directly, no need for additional checking */}
                 <Users />
                 <User />
+                
             </div>
+            <ToastContainer/>
         </div>
     );
 }
