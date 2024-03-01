@@ -7,8 +7,15 @@ import SubHeading from "../components/SubHeading";
 import axios from "axios";
 import BottomWarning from "../components/BottomWarning";
 import { Image } from "../components/Image";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-export const handleSignup = async ({ username, firstName, lastName, password }) => {
+export const handleSignup = async ({
+  username,
+  firstName,
+  lastName,
+  password,
+}) => {
   try {
     const response = await axios.post(
       "http://localhost:3001/api/v1/user/signup",
@@ -22,7 +29,6 @@ export const handleSignup = async ({ username, firstName, lastName, password }) 
     localStorage.setItem("token", response.data.token);
     return true; // Indicate successful signup
   } catch (error) {
-    alert("Incorrect Information:", error);
     // Handle signup failure if needed
     return false; // Indicate failed signup
   }
@@ -36,11 +42,16 @@ const Signup = () => {
   const navigate = useNavigate(); // Initialize useNavigate
 
   const handleSignupClick = async () => {
-    const success = await handleSignup({ username, firstName, lastName, password });
+    const success = await handleSignup({
+      username,
+      firstName,
+      lastName,
+      password,
+    });
     if (success) {
       navigate("/dashboard"); // Navigate to dashboard page
     } else {
-      alert("Signup failed");
+      toast.error("Failed! Please Check Credentials");
     }
   };
 
@@ -48,7 +59,7 @@ const Signup = () => {
     <div className="bg-slate-300 h-screen flex justify-center">
       <div className="flex flex-col justify-center">
         <div className="rounded-lg bg-white text-center p-5 h-max px-4 ">
-        <Image/>
+          <Image />
           <Heading label={"Sign up"} />
           <SubHeading label={"Enter your information to create an account"} />
           <InputBox
@@ -82,6 +93,7 @@ const Signup = () => {
           <div className="pt-4 ">
             <Button onClick={handleSignupClick} label={"Sign up"} />
           </div>
+          <ToastContainer/>
           <BottomWarning
             label={"Already have an account?"}
             buttonText={"Sign in"}
