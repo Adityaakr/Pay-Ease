@@ -2,9 +2,8 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
 
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export const SendMoney = () => {
   const [searchParams] = useSearchParams();
   const id = searchParams.get("id");
@@ -44,10 +43,9 @@ export const SendMoney = () => {
 
   return (
     <>
-      <ToastContainer />
       <div
         className="flex justify-center h-screen "
-        style={{ backgroundImage: "url('/public/patterns.jpg')" }}
+        style={{ backgroundImage: "url('/patterns.jpg')" }}
       >
         <div className="h-full flex flex-col justify-center">
           <div
@@ -99,6 +97,7 @@ export const SendMoney = () => {
                   Initiate Transfer
                 </button>
               </div>
+              <ToastContainer />
             </div>
           </div>
         </div>
