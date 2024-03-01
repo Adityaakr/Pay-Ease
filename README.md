@@ -22,7 +22,7 @@ To initiate the backend server, please follow these steps:
     After executing the command, you should see the following output in your terminal:
 
     ```vbnet
-    Server listening on port 3001
+    App Listen on 3001
     Connecting to MongoDB
     ```
 
