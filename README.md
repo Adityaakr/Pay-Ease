@@ -6,16 +6,22 @@ Welcome to the PayEase project! Our platform simplifies payment and transaction 
 
 To get the backend server up and running, please follow these steps:
 
-1. Navigate to the backend directory:
+1. Optionally, you can run the following command to install backend dependencies:
+
+    ```bash
+    npm install
+    ```
+
+2. Navigate to the backend directory:
 
     ```bash
     cd backend
     npm install
     ```
 
-2. In the backend directory, you'll find an `env.example` file. Duplicate this file and rename it to `.env`.
+3. In the backend directory, you'll find an `env.example` file. Duplicate this file and rename it to `.env`.
 
-3. Open the `.env` file and populate it with the required environment variables:
+4. Open the `.env` file and populate it with the required environment variables:
 
     ```plaintext
     JWT_SECRET=//YourSecretKeyHere
@@ -24,9 +30,9 @@ To get the backend server up and running, please follow these steps:
 
     Replace `//YourSecretKeyHere` with your chosen secret key for JWT (JSON Web Tokens) and `//YourMongoDBURLHere` with your MongoDB connection URL.
 
-4. Save the `.env` file.
+5. Save the `.env` file.
 
-5. Start the server by running the following command:
+6. Start the server by running the following command:
 
     ```bash
     node index.js
