@@ -47,7 +47,7 @@ export const SendMoney = () => {
       <ToastContainer />
       <div
         className="flex justify-center h-screen "
-        style={{ backgroundImage: "url('/public/patterns.jpg')" }}
+        style={{ backgroundImage: "url('/patterns.jpg')" }}
       >
         <div className="h-full flex flex-col justify-center">
           <div
