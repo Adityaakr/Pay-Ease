@@ -10,6 +10,7 @@ To get the backend server up and running, please follow these steps:
 
     ```bash
     cd backend
+    npm install
     ```
 
 2. In the backend directory, you'll find an `env.example` file. Duplicate this file and rename it to `.env`.
@@ -46,6 +47,7 @@ To begin with the frontend application, follow these steps:
 
     ```bash
     cd frontend
+    npm install
     ```
 
 2. Run the following command to start the application:
