@@ -62,7 +62,7 @@ function Signin() {
           <ToastContainer />
           <BottomWarning
             label={"Don't have an account?"}
-            buttonText={"Sign in"}
+            buttonText={"Sign Up"}
             to={"/Signup"}
           />
         </div>
